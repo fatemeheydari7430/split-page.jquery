@@ -1,0 +1,152 @@
+@font-face{
+    font-family:vazir-medium ;
+    src: url("../fonts/Vazir-Medium.eot") format("eot"),
+         url("../fonts/Vazir-Medium.woff") format("woff"),
+         url("../fonts/Vazir-Medium.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+  }
+  *,
+  body {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: vazir-medium;
+  }
+  
+  body{
+      direction: rtl;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  ul,
+  ol,
+  li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+
+
+
+
+  h1{
+      color: #fff;
+      font-size: 36px;
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      white-space: nowrap;
+  }
+   h1::after{
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 4px;
+      left: 0;
+      bottom: -8px;
+      background-color: #fff;
+      transition: all .5s ease-in-out;
+  }
+  h1:hover::after{
+      width: 100%;
+  }
+  a.cta{
+      display: block;
+      position: absolute;
+      height: 50px;
+      width: 120px;
+      line-height: 50px;
+      left: 50%;
+      bottom: 10%;
+      transform: translate(-50%,-50%);
+      border: 2px solid #fff;
+      font-size: 18px;
+      font-weight: 400;
+      color: #fff;
+      text-align: center;
+  }
+  a.cta::before{
+      content: '';
+      background-color: #fff;
+      position: absolute;
+      height: 0;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      transition: all .3s ease-in-out;
+  }
+  a.cta:hover::before{
+      height: 4px;
+  }
+
+ /* .container{
+      position: relative;
+      width: 100%;
+      height: 100%;
+  } */
+   .container .one-half{
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      overflow: hidden;
+  }
+  .container .left{
+      left: 0;
+      background: url("../img/web-design-coimbatore.jpg");
+      background-size: cover;
+      transition: all .5s ease-in-out;
+  }
+  .container .left::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 0, 120, .5);
+      position: absolute;
+      transition: all .5s ease-in-out;
+  }
+  .container .right{
+      right: 0;
+      background: url("../img/website_khob_01 copy.jpg");
+      background-size: cover;
+      transition: all .5s ease-in-out;
+  }
+  .container .right::before{
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: rgba(25, 120, 220, .5);
+      position: absolute;
+      transition: all .5s ease-in-out;
+  }
+
+  .left-is-hoverd .left{
+      width: 85%;
+  }
+  .left-is-hoverd .left h1::after{
+      width: 100%;
+  }
+  .left-is-hoverd .right{
+      width: 15%;
+  }
+  .left-is-hoverd .right::before{
+      background: rgba(0, 0, 0, .65);
+  }
+
+  .right-is-hoverd .right{
+      width: 85%;
+  }
+  .right-is-hoverd .right h1::after{
+      width: 100%;
+  }
+  .right-is-hoverd .left{
+      width: 15%;
+  }
+  .right-is-hoverd .left::before{
+      background: rgba(0, 0, 0, .65);
+  }
